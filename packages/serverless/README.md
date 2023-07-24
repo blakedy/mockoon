@@ -80,7 +80,7 @@ const mockEnv = require('./datafile.json');
 
 const app = new mockoon.MockoonServerless(mockEnv);
 
-exports.app = functions.https.onRequest(app);
+exports.app = functions.https.onRequest(app.firebaseApp());
 ```
 
 ### Netlify Functions
